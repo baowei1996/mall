@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="generator.properties"/>
+    <context id="MySqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+        <property name="beginningDelimiter" value=""/>
+        <property name="endingDelimiter" value=""/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+<!--        为模型生成序列化方法-->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+<!--        为生成的模型创造一个toString方法-->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+<!--        可以自定义生成model的代码注释-->
+        <commentGenerator type="bobking.icu.mall.mbg.CommentGenerator">
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.connectionURL}"
+                        userId="${jdbc.userId}"
+                        password="${jdbc.password}">
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+<!--        指定生成model的路径-->
+        <javaModelGenerator targetPackage="bobking.icu.mall.mbg.model" targetProject="E:\Project\mall\src\main\java"></javaModelGenerator>
+        <sqlMapGenerator targetPackage="bobking.icu.mall.mbg.mapper" targetProject="E:\Project\mall\src\main\resources"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="bobking.icu.mall.mbg.mapper"
+                             targetProject="E:\Project\mall\src\main\java"/>
+        <table tableName="%">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
