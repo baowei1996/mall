@@ -7,10 +7,10 @@ spring:
     url: jdbc:mysql://bobking.icu:3306/mall?useUnicode=true&characterEncoding=utf-8
     username: root
   redis:
-    host: localhost
-    database: 0
+    host: bobking.icu
+    database: 0   # 默认有16个database，从中选择一个
     port: 6379
-    password: # Redis服务器连接密码（默认为空）
+    password: bobking # Redis服务器连接密码（默认为空）
     jedis:
       pool:
         max-active: 8
