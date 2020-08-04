@@ -25,9 +25,17 @@ mybatis:
     - classpath:mapper/*.xml
     - classpath*:bobking/**/mapper/*.xml
 
+# 自定义redis key
 redis:
   key:
     prefix:
       authCode: "portal:authCode:"
     expire:
       authCode: 120
+
+# 自定义jwt key
+jwt:
+  tokenHeader: Authorization
+  secret: bobking
+  expiration: 604800  #7*24*60*60 token具有一周的过期时间
+  tokenHead: Bearer
