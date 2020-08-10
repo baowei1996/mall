@@ -25,7 +25,7 @@
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 <!--        指定生成model的路径-->
-        <javaModelGenerator targetPackage="bobking.icu.mall.mbg.model" targetProject="E:\Project\mall\src\main\java"></javaModelGenerator>
+        <javaModelGenerator targetPackage="bobking.icu.mall.mbg.model" targetProject="E:\Project\mall\src\main\java"/>
         <sqlMapGenerator targetPackage="bobking.icu.mall.mbg.mapper" targetProject="E:\Project\mall\src\main\resources"/>
         <javaClientGenerator type="XMLMAPPER" targetPackage="bobking.icu.mall.mbg.mapper"
                              targetProject="E:\Project\mall\src\main\java"/>
