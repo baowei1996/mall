@@ -19,6 +19,16 @@ spring:
         min-idle: 0
     lettuce:
       shutdown-timeout: 3000ms
+#  如果要连接远程的elastic需要配置以下的内容
+#  elasticsearch:
+#    rest:
+#      uris: ["bobking.icu:9200"]
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: localhost:9300 # es的连接地址及端口
+      cluster-name: elasticsearch # es集群的名称
 
 mybatis:
   mapper-locations:
