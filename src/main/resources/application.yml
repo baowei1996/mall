@@ -29,6 +29,12 @@ spring:
         enabled: true
       cluster-nodes: bobking.icu:9300 # es的连接地址及端口
       cluster-name: docker-cluster # es集群的名称
+    mongodb:
+      host: bobking.icu
+      port: 27017
+      database: mall
+      username: admin
+      password: bobking
 
 mybatis:
   mapper-locations:
